@@ -40,6 +40,6 @@ python3 ./app.py
 ## First use
 By default, this app starts on http://localhost:5000. You may create your own account or use the following credentials.
 <blockquote>
-Email: <b>uzair.hussain10@gmail.com</b><br />
+Email: <b>test-user@gmail.com</b><br />
 Password: <b>test@123</b><br />
 </blockquote>
