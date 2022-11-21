@@ -1,0 +1,6 @@
+.*
+__*
+!.gitignore
+*.sqlite3
+celerybeat-schedule
+!.env.example

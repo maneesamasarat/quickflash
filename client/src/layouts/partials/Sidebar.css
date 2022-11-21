@@ -1,0 +1,13 @@
+.nav-link:hover,
+.nav-link:focus {
+    color: rgba(0, 0, 0, 0.85);
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.text-logo {
+    font-size: 16pt;
+}
+
+.credit {
+    font-size: 9pt;
+}

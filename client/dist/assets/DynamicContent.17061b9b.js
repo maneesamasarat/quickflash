@@ -1,0 +1,1 @@
+import{_ as a}from"./index.5636f22e.js";import{l as r,o as t,j as c,f as e}from"./vendor.9a0731a0.js";const n={props:["loaded"]},d={key:1,class:"loading"},l=e("div",{class:"progress-bar"},[e("div",{class:"progress-bar-value"})],-1),_=[l];function i(s,p,o,f,m,u){return o.loaded?r(s.$slots,"default",{key:0}):(t(),c("div",d,_))}var k=a(n,[["render",i]]);export{k as D};

@@ -1,0 +1,36 @@
+version: '3.8'
+services:
+  cache:
+    image: redis:6.2-alpine
+    restart: always
+    ports:
+      - '6379:6379'
+    command: redis-server --save 20 1 --loglevel warning 
+    volumes: 
+      - cache:/data
+  # python app
+  app:
+    build: .
+   
+    restart: always
+    ports:
+      - '8000:5000'
+    
+    command: python app.py
+    volumes:
+      - ./:/dat
+   
+    depends_on:
+      - cache
+    env_file:
+      - .env
+
+
+  
+ 
+volumes:
+  cache:
+    driver: local
+ 
+
+
