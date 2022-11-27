@@ -11,8 +11,8 @@
                     </router-link>
                 </li>
                 <li>
-                    <router-link :to="{ name: 'decks.index' }" class="nav-link link-dark rounded">
-                        <i class="bi bi-card-text me-2", id ="manage"></i>
+                    <router-link :to="{ name: 'decks.index' }" class="nav-link link-dark rounded", id ="manage">
+                        <i class="bi bi-card-text me-2"></i>
                         Manage decks
                     </router-link>
                 </li>
