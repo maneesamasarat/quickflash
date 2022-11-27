@@ -6,13 +6,13 @@
             <ul class="list-unstyled">
                 <li>
                     <router-link :to="{ name: 'dashboard' }" class="nav-link link-dark rounded">
-                        <i class="bi bi-speedometer2 me-2"></i>
+                        <i class="bi bi-speedometer2 me-2", id="dashboard"></i>
                         Dashboard
                     </router-link>
                 </li>
                 <li>
                     <router-link :to="{ name: 'decks.index' }" class="nav-link link-dark rounded">
-                        <i class="bi bi-card-text me-2"></i>
+                        <i class="bi bi-card-text me-2", id ="manage"></i>
                         Manage decks
                     </router-link>
                 </li>
