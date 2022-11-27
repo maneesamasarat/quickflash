@@ -38,7 +38,7 @@ celery -A jobs.celery beat &
 python3 ./app.py
 ```
 ## First use
-By default, this app starts on http://localhost:5000. You may create your own account or use the following credentials.
+By default, this app starts on http://localhost:8000. You may create your own account or use the following credentials.
 <blockquote>
 Email: <b>test-user@gmail.com</b><br />
 Password: <b>test@123</b><br />
