@@ -8,5 +8,5 @@ blueprint = Blueprint('dashboard', __name__)
 @login_required
 def index():
     return jsonify({
-        'decks': list(reversed(current_user.decks))
+        'decks': list(reversed(current_user.))
     })
