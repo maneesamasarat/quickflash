@@ -5,7 +5,7 @@ from flask_login import UserMixin
 
 db = SQLAlchemy(app)
 
-
+#user table
 @dataclass
 class User(db.Model, UserMixin):
     id: int
