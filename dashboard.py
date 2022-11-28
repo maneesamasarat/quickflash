@@ -1,7 +1,7 @@
 from flask import Blueprint, jsonify
 from flask_login import login_required, current_user
 
-blueprint = Blueprint('dashboard', __name__)
+blueprint = Blueprint('dashboard', __name_)
 
 
 @blueprint.route('/')
