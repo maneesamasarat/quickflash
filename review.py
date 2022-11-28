@@ -3,7 +3,7 @@ from flask import Blueprint, jsonify, request, abort
 from flask_login import login_required, current_user
 from deck import find_deck_or_fail
 from util import error, message
-
+from models import db, Card, Review, ReviewCard
 
 blueprint = Blueprint('review', __name__)
 
