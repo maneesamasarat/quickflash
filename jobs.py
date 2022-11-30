@@ -84,3 +84,5 @@ def send_reminder_to_user(id):
         recipients=[user.email],
     )
 
+
+    mail.send(reminder)
