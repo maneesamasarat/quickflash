@@ -25,7 +25,7 @@ class User(db.Model, UserMixin):
     reviews = db.relationship(
         'Review', back_populates='user', cascade="all, delete-orphan")
 
-
+#Deck Table
 @dataclass
 class Deck(db.Model):
     id: int
@@ -53,7 +53,7 @@ class Deck(db.Model):
     def last_review(self):
         return self.reviews[-1] if len(self.reviews) > 0 else None
 
-
+#Card Table
 @dataclass
 class Card(db.Model):
     id: int
@@ -77,7 +77,7 @@ class Card(db.Model):
     def max_score(self):
         return self.points * 4
 
-
+#Review Table
 @dataclass
 class Review(db.Model):
     id: int
@@ -110,7 +110,7 @@ class Review(db.Model):
     def score_percent(self):
         return int(self.score * 100 / max(self.max_score, 1))
 
-
+#Review Card Table
 @dataclass
 class ReviewCard(db.Model):
     id: int
