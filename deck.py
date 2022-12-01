@@ -31,7 +31,7 @@ def show(deck_id):
         'cards': deck.cards
     })
 
-
+#The exported file is sent to the deck created users email ID
 @blueprint.route('/decks/<int:deck_id>/export')
 @login_required
 def export(deck_id):
