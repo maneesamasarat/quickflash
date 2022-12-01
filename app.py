@@ -49,7 +49,7 @@ def load_user_from_request(request):
             return user
     return None
 
-
+#on incorrect login deatils, system return an error message
 @login_manager.unauthorized_handler
 def unauthorized():
     return message('Please log in again.', 401)
