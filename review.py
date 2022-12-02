@@ -30,6 +30,8 @@ def index(deck_id):
 
 @blueprint.route('/decks/<int:deck_id>/reviews/<int:review_id>')
 @login_required
+
+# render the previous review for deck
 def show(deck_id, review_id):
     review = find_review_or_fail(review_id, deck_id)
     review_cards = ReviewCard.query.filter_by(
@@ -44,6 +46,7 @@ def show(deck_id, review_id):
 
 @blueprint.route('/decks/<int:deck_id>/reviews', methods=['POST'])
 @login_required
+# SAve reviews for cards
 def store(deck_id):
     find_deck_or_fail(deck_id)
 
@@ -70,6 +73,8 @@ def store(deck_id):
 
 @blueprint.route('/decks/<int:deck_id>/reviews/<int:review_id>', methods=['DELETE'])
 @login_required
+
+#delete reviews
 def destroy(deck_id, review_id):
     review = find_review_or_fail(review_id, deck_id)
 

@@ -38,7 +38,7 @@ def store():
 
     return jsonify(user)
 
-
+#Incorrect credentials
 @blueprint.route('/auth/login', methods=['POST'])
 def authenticate():
     email = request.form.get('email')

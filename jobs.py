@@ -19,6 +19,7 @@ def setup_periodic_tasks(sender, **kwargs):
 
 
 @celery.task()
+# export deck to csv
 def export_deck(deck_id):
 
     import csv
@@ -68,6 +69,8 @@ def send_reminders():
 
 
 @celery.task()
+
+#Send Reminder email
 def send_reminder_to_user(id):
     user = User.query.get(id)
 

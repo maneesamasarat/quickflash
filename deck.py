@@ -24,6 +24,8 @@ def index():
 
 @blueprint.route('/decks/<int:deck_id>')
 @login_required
+
+# show contents of the deck
 def show(deck_id):
     deck = find_deck_or_fail(deck_id)
     return jsonify({
@@ -44,6 +46,8 @@ def export(deck_id):
 @ blueprint.route('/decks', methods=['PUT'])
 @ blueprint.route('/decks/<int:deck_id>', methods=['PUT'])
 @ login_required
+
+# Add and edit deck
 def store(deck_id=None):
     name = request.form.get('name', current_user.name + "'s Deck")
     card_ids = request.form.getlist('card_ids[]')
@@ -92,6 +96,8 @@ def store(deck_id=None):
 
 @ blueprint.route('/decks/<int:deck_id>', methods=['DELETE'])
 @ login_required
+
+# delete deck
 def destroy(deck_id):
     deck = find_deck_or_fail(deck_id)
 
