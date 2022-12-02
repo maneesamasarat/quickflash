@@ -13,7 +13,7 @@ def generate_token(user):
     db.session.commit()
     return user.token
 
-
+#Check if the DB already has a user with the email provided before creating a new user in the DB
 @blueprint.route('/auth/register', methods=['POST'])
 def store():
     name = request.form.get('name')
